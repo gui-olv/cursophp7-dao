@@ -3,10 +3,11 @@
 require_once ("config.php");
 
 
-$sql = new Sql();
 
-$usuarios = $sql->select("Select * From tbl_usuario");
 
-echo json_encode($usuarios);
+$usuarios = new Usuario();
+$usuarios->obterPorPk(1);
+
+echo $usuarios
 
 ?>
